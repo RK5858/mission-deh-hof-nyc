@@ -10,6 +10,9 @@ humidity,
 clouds
 FROM {{ source('DEMO', 'WEATHER') }}
 ),
+{{ config(materialized='table') }}
+
+
 Daily_Weather_agg_CTE AS (
 SELECT daily_weather
       ,WEATHER

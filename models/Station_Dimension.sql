@@ -1,3 +1,6 @@
+{{ config(materialized='table') }}
+
+
 WITH STATION_CTE AS(
 
 SELECT DISTINCT

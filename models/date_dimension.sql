@@ -1,3 +1,5 @@
+{{ config(materialized='table') }}
+
 WITH DATE_CTE AS(
 
 SELECT TO_TIMESTAMP(STARTED_AT) AS STARTED_AT,
