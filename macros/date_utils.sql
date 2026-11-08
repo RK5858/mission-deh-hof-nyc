@@ -8,3 +8,12 @@
        END
 
 {% endmacro %}
+
+{% macro day_type(x) %}
+
+ CASE 
+          WHEN DAYNAME(TO_TIMESTAMP({{x}})) in ('Sat','Sun') THEN 'WEEKEND'
+           ELSE 'BUSINESSDAY'
+       END
+
+{% endmacro %}
